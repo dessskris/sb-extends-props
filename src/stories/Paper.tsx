@@ -2,7 +2,7 @@ import React from 'react';
 import './button.css';
 import { PaperProps as MUIPaperProps } from '@material-ui/core';
 
-export interface BasePaperProps {
+export interface PaperProps extends MUIPaperProps {
   /**
    * Button contents
    */
@@ -19,7 +19,7 @@ export interface BasePaperProps {
   disableOutline?: boolean;
 }
 
-type PaperProps = BasePaperProps & MUIPaperProps;
+//type PaperProps = BasePaperProps & MUIPaperProps;
 
 /**
  * Primary UI component for user interaction
