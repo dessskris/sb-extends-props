@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-import { Breadcrumbs, IBreadcrumbProps, IBreadcrumbsProps } from '@blueprintjs/core';
+import { Breadcrumbs, IBreadcrumbProps } from './Breadcrumbs';
 
 export default {
   title: 'Example/Breadcrumbs',
@@ -13,9 +13,4 @@ const items: IBreadcrumbProps[] = [
   { icon: "document", text: 'Document.xls' },
 ];
 
-export const Default = (args: IBreadcrumbsProps) => <Breadcrumbs {...args} collapseFrom='start' />;
-
-Default.args = {
-  items,
-  collapseFrom: 'start',
-} as IBreadcrumbsProps;
+export const Default = () => <Breadcrumbs items={items} collapseFrom='start' />;
